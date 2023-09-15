@@ -1,18 +1,40 @@
+//package org.example;
 
+import java.util.ArrayList;
 
-public class Question {
-    public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+public abstract class Question {
+    private String quizQuestion;
+    private ArrayList<Integer> correctAnswer;
+    private Boolean isAnswerCorrect;
 
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+    public Question(String quizQuestion, ArrayList<Integer> correctAnswer, Boolean isAnswerCorrect) {
+        this.quizQuestion = quizQuestion;
+        this.correctAnswer = correctAnswer;
+        this.isAnswerCorrect = isAnswerCorrect;
+    }
 
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
-        }
+    public String getQuizQuestion() {
+        return quizQuestion;
+    }
+
+    public void setQuizQuestion(String quizQuestion) {
+        this.quizQuestion = quizQuestion;
+    }
+
+    public ArrayList<Integer> getCorrectAnswer() {
+        return correctAnswer;
+    }
+
+    public void setCorrectAnswer(ArrayList<Integer> correctAnswer) {
+        this.correctAnswer = correctAnswer;
+    }
+
+    public Boolean getAnswerCorrect() {
+        return isAnswerCorrect;
+    }
+
+    public void setAnswerCorrect(Boolean answerCorrect) {
+        isAnswerCorrect = answerCorrect;
     }
 }
 
