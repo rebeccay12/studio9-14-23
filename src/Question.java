@@ -36,5 +36,17 @@ public abstract class Question {
     public void setAnswerCorrect(Boolean answerCorrect) {
         isAnswerCorrect = answerCorrect;
     }
+
+    @Override
+    public String toString(){
+        return quizQuestion;
+    }
+//    public abstract String displayQuestion();
+
+    public abstract String displayQuizQuestion();
+    public abstract String displayPossibleAnswers();
+    public abstract Boolean isAnswerCorrect();
+
+
 }
 
